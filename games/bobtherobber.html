@@ -12,7 +12,7 @@
   </header>
 
   <div id="game-info">
-    <img src="gameicons/orionsandbox.png" alt="Bob The Robber">
+    <img src="gameicons/bobtherobber.png" alt="Bob The Robber">
     <h1>Bob The Robber</h1>
     <p>2011 · Жанр: Бродилки</p>
   </div>
@@ -21,7 +21,7 @@
 
   <div class="controls">
     <button id="likeBtn" alt="Лайк">❤</button>
-    <a href="games/orionsandbox.swf" download alt="Скачать .swf">
+    <a href="games/bobtherobber.swf" download alt="Скачать .swf">
       <button>⬇</button>
     </a>
     <button id="fsBtn" alt="Полноэкранный режим">⤬</button>
@@ -48,7 +48,7 @@
       player.style.width = "800px";
       player.style.height = "600px";
       document.getElementById("container").appendChild(player);
-      player.load({ url: "games/orionsandbox.swf" });
+      player.load({ url: "games/bobtherobber.swf" });
 
       document.getElementById("fsBtn").onclick = () => {
         if (player.requestFullscreen) player.requestFullscreen();
