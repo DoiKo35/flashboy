@@ -12,7 +12,7 @@
   </header>
 
   <div id="game-info">
-    <img src="gameicons/Skullkid.png" alt="Skullkid">
+    <img src="gameicons/skullkid.png" alt="Skullkid">
     <h1>Skullkid</h1>
     <p>2002 · Жанр: Жестокие</p>
   </div>
@@ -21,7 +21,7 @@
 
   <div class="controls">
     <button id="likeBtn" alt="Лайк">❤</button>
-    <a href="games/Skullkid.swf" download alt="Скачать .swf">
+    <a href="games/skullkid.swf" download alt="Скачать .swf">
       <button>⬇</button>
     </a>
     <button id="fsBtn" alt="Полноэкранный режим">⤬</button>
@@ -48,7 +48,7 @@
       player.style.width = "800px";
       player.style.height = "600px";
       document.getElementById("container").appendChild(player);
-      player.load({ url: "games/Skullkid.swf" });
+      player.load({ url: "games/skullkid.swf" });
 
       document.getElementById("fsBtn").onclick = () => {
         if (player.requestFullscreen) player.requestFullscreen();
