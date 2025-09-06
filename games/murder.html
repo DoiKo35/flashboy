@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Whack Your Boss</title>
+  <title>Murder</title>
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
   <link rel="stylesheet" href="gamestyles.css" />
 </head>
@@ -12,23 +12,23 @@
   </header>
 
   <div id="game-info">
-    <img src="gameicons/whackyourboss.png" alt="Whack Your Boss">
-    <h1>Whack Your Boss</h1>
-    <p>2004 · Жанр: С выбором</p>
+    <img src="gameicons/murder.png" alt="Murder">
+    <h1>Murder</h1>
+    <p>2014 · Жанр: Выживание</p>
   </div>
 
   <div id="container"></div>
 
   <div class="controls">
     <button id="likeBtn" alt="Лайк">❤</button>
-    <a href="games/whackyourboss.swf" download alt="Скачать .swf">
+    <a href="games/murder.swf" download alt="Скачать .swf">
       <button>⬇</button>
     </a>
     <button id="fsBtn" alt="Полноэкранный режим">⤬</button>
   </div>
 
   <section class="comments">
-    <h3>Чат & Комментарии — Whack Your Boss</h3>
+    <h3>Чат & Комментарии — Murder</h3>
     <div id="flexchat_game1"></div>
     <script>
       window.flexChatConfig = {
@@ -48,7 +48,7 @@
       player.style.width = "800px";
       player.style.height = "600px";
       document.getElementById("container").appendChild(player);
-      player.load({ url: "games/whackyourboss.swf" });
+      player.load({ url: "games/murder.swf" });
 
       document.getElementById("fsBtn").onclick = () => {
         if (player.requestFullscreen) player.requestFullscreen();
