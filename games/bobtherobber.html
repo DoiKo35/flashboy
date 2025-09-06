@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Bob The Robber</title>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <link rel="stylesheet" href="gamestyles.css" />
+</head>
+<body>
+  <header>
+    <a href="/flashboy" alt="На главную страницу">flashboy</a>
+  </header>
+
+  <div id="game-info">
+    <img src="gameicons/orionsandbox.png" alt="Bob The Robber">
+    <h1>Bob The Robber</h1>
+    <p>2011 · Жанр: Бродилки</p>
+  </div>
+
+  <div id="container"></div>
+
+  <div class="controls">
+    <button id="likeBtn" alt="Лайк">❤</button>
+    <a href="games/orionsandbox.swf" download alt="Скачать .swf">
+      <button>⬇</button>
+    </a>
+    <button id="fsBtn" alt="Полноэкранный режим">⤬</button>
+  </div>
+
+  <section class="comments">
+    <h3>Чат & Комментарии — Bob The Robber</h3>
+    <div id="flexchat_game1"></div>
+    <script>
+      window.flexChatConfig = {
+        webhookUrl: "ВАШ_WEBHOOK_GAME1",
+        userFields: { name: true, email: true },
+        welcomeText: "Комментарии к этой игре"
+      };
+    </script>
+    <script src="https://your-flexchat-host.com/flexchat.js"></script>
+  </section>
+
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("DOMContentLoaded", () => {
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      player.style.width = "800px";
+      player.style.height = "600px";
+      document.getElementById("container").appendChild(player);
+      player.load({ url: "games/orionsandbox.swf" });
+
+      document.getElementById("fsBtn").onclick = () => {
+        if (player.requestFullscreen) player.requestFullscreen();
+      };
+    });
+    document.getElementById("likeBtn").onclick = () => {
+      alert("Вы поставили лайк!");
+    };
+  </script>
+</body>
+</html>
